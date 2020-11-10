@@ -2,9 +2,13 @@
 
 using namespace std;
 
-void editFile(string inputStr, string path)
+string editFile(string inputStr, string path)
 {
 	ifstream ReadFile(path);
+	if (ReadFile.fail())
+	{
+		return "File not found.";
+	}
 	string fullText;
 	string testText;
 	while (getline(ReadFile, testText))
@@ -28,5 +32,5 @@ void editFile(string inputStr, string path)
 
 	myfile << fullText;
 	myfile.close();
-	return;
+	return "Component Added Successfully.";
 }

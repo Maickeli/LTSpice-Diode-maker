@@ -15,6 +15,9 @@ public:
 
 	wxFilePickerCtrl *dFile_pc = nullptr;
 
+	wxDirPickerCtrl *dDir_pc = nullptr;
+	wxStaticText *dDir_st = nullptr;
+
 	wxTextCtrl *dName_it = nullptr;
 	wxStaticText *dName_st = nullptr;
 
@@ -50,6 +53,10 @@ public:
 
 	void OnButtonClicked(wxCommandEvent &evt);
 
+	void OnSize(wxSizeEvent& event);
+	void OnIdle(wxIdleEvent& event);
+
+	void DrawWindow();
 
 	wxDECLARE_EVENT_TABLE();
 };

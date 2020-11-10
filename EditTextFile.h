@@ -4,4 +4,4 @@
 #include <string>
 
 using namespace std;
-void editFile(string inputStr, string path);
+string editFile(string inputStr, string path);
